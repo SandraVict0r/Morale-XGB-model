@@ -11,7 +11,15 @@ import statsmodels.api as sm
 from statsmodels.formula.api import ols
 import scikit_posthocs as sp
 from scipy import stats
-from library import *
+
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import multilabel_confusion_matrix, classification_report
+from skater.core.local_interpretation.lime.lime_tabular import LimeTabularExplainer
+from sklearn import tree
+from subprocess import call
+from tqdm import tqdm
+import pickle
 
 import statsmodels.stats.multicomp as mc
 
@@ -277,3 +285,96 @@ def random_pair():
     while a == b:
         a, b = random.sample(range(7), 2)
     return a,b
+
+########################## Random Forest notebook function ##########################
+
+def classification_report_opti(y_test, y_test_predict):
+    classification = {}
+    for cl in range(max(y_test) + 1):
+        tp = 0
+        fp = 0
+        fn = 0
+        tn = 0
+        for i in range(len(y_test)):
+            if cl > 0 and cl < max(y_test):
+                if y_test[i] == cl and y_test_predict[i] in [
+                        cl - 1, cl, cl + 1
+                ]:
+                    tp += 1
+                elif y_test[i] == cl and y_test_predict[i] not in [
+                        cl - 1, cl, cl + 1
+                ]:
+                    fn += 1
+                elif y_test[i] != cl and y_test_predict[i] in [
+                        cl - 1, cl, cl + 1
+                ]:
+                    fp += 1
+                elif y_test[i] != cl and y_test_predict[i] not in [
+                        cl - 1, cl, cl + 1
+                ]:
+                    tn += 1
+            elif cl == 0:
+                if y_test[i] == cl and y_test_predict[i] in [cl, cl + 1]:
+                    tp += 1
+                elif y_test[i] == cl and y_test_predict[i] not in [cl, cl + 1]:
+                    fn += 1
+                elif y_test[i] != cl and y_test_predict[i] in [cl, cl + 1]:
+                    fp += 1
+                elif y_test[i] != cl and y_test_predict[i] not in [cl, cl + 1]:
+                    tn += 1
+            elif cl == max(y_test):
+                if y_test[i] == cl and y_test_predict[i] in [cl, cl - 1]:
+                    tp += 1
+                elif y_test[i] == cl and y_test_predict[i] not in [cl, cl - 1]:
+                    fn += 1
+                elif y_test[i] != cl and y_test_predict[i] in [cl, cl - 1]:
+                    fp += 1
+                elif y_test[i] != cl and y_test_predict[i] not in [cl, cl - 1]:
+                    tn += 1
+            classification[cl] = {'TN': tn, 'FN': fn, 'FP': fp, 'TP': tp}
+
+    for i in classification:
+        precision = (
+            classification[i]['TP'] /
+            (classification[i]['TP'] + classification[i]['FP'])
+        ) if (classification[i]['TP'] + classification[i]['FP']) != 0 else 0
+        recall = (
+            classification[i]['TP'] /
+            (classification[i]['TP'] + classification[i]['FN'])
+        ) if (classification[i]['TP'] + classification[i]['FN']) != 0 else 0
+        accuracy = (
+            (classification[i]['TP'] + classification[i]['TN']) /
+            (classification[i]['TP'] + classification[i]['TN'] +
+             classification[i]['FP'] + classification[i]['FN'])
+        ) if (classification[i]['TP'] + classification[i]['TN'] +
+              classification[i]['FP'] + classification[i]['FN']) != 0 else 0
+        classification[i].update({
+            'precision': round(precision, 2),
+            'recall': round(recall, 2),
+            'accuracy': round(accuracy, 2)
+        })
+        f1_score = (
+            2 * (classification[i]['precision'] * classification[i]['recall'])
+        ) / (classification[i]['precision'] + classification[i]['recall']) if (
+            classification[i]['precision'] +
+            classification[i]['recall']) != 0 else 0
+        classification[i].update({'f1-score': round(f1_score, 2)})
+
+    num = 0
+    denom = 0
+    for i in classification:
+        num += classification[i]['TP'] + classification[i]['TN']
+        denom += classification[i]['TP'] + classification[i][
+            'TN'] + classification[i]['FP'] + classification[i]['FN']
+
+    accuracy = num / denom
+    classification.update({'accuracy': round(accuracy, 2)})
+
+    print('class | precision | recall | f1-score | accuracy')
+    for i in range(max(y_test) + 1):
+        print(i, '    | ', classification[i]['precision'], '    | ',
+              classification[i]['recall'], ' | ',
+              classification[i]['f1-score'], '   | ',
+              classification[i]['accuracy'])
+    print()
+    print('accuracy :    ', classification['accuracy'])
