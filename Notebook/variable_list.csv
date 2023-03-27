@@ -1,0 +1,11 @@
+Feature;Description
+left_char;An integer i between 1 and 7 indicating that Pi is the character on the left of the screen.
+right_char;An integer i between 1 and 7 indicating that Pi is the character on the right of the screen.
+strength_left;A value between 0 and 15 representing the perceived strength of left_char.
+strength_right;A value between 0 and 15 representing the perceived strength of right_char.
+value_left;The value, between 0 and 10, assigned to left_char in the current scenario (value_right = 10 - value_left).
+scenario;A value between 1 and 9 representing the current scenario.
+value_left_rep1;A value, between 0 and 10, assigned to left_char in the first occurrence of the current scenario. This is left to ?1 if the current scenario has never been encountered.
+value_left_rep2;A value, between 0 and 10, assigned to left_char in the second occurrence of the current scenario. This is left to ?1 if the current scenario has not been encountered twice.
+sex;An integer between 0 and 2 representing the sex of the participant (0 female, 1 male, and 2 other).
+age;A positive integer number representing the age of the participant.
