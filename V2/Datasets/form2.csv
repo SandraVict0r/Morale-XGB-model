@@ -1,0 +1,61 @@
+ID;Heure de début;Heure de fin;Adresse de messagerie;Nom;"En cochant cette case, vous acceptez que les informations saisies soient exploitées dans le cadre d'une étude scientifique.
+";Voici, un exemple de scénario de répétition. Dans ce cas, le même  scénario incluant les mêmes conditions a été présenté 3 fois, séparé par  d'autres scénarios, à l'entité qui a pris sa décision s...;"Voici, un exemple de scénario consécutif. Dans ce cas, ces 3 scénarios ont été présenté, l'un juste après l'autre, à l'entité, qui a pris sa décision sur chacune des situations. 
+";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+2";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+3";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+4";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+5";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+6";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+7";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+8";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+9";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+10";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+11";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+12";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+13";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+14";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+15";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+16";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+17";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+18";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+19";"Indiquez votre certitude dans le fait que c'est un humain qui a pris la décision ?
+
+20"
+2;12/5/22 11:57:51;12/5/22 12:03:11;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;10;10;10;10;5;10;0;10;0;0;10;10;0;10;6;10;0;6;10;0;10
+3;12/5/22 11:59:28;12/5/22 12:06:59;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;8;2;7;6;4;1;6;7;9;6;5;2;8;4;2;3;8;8;7;8;3
+4;12/5/22 11:58:10;12/5/22 12:07:53;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;7;3;8;8;4;2;7;5;7;7;7;4;6;8;3;6;7;7;6;8;4
+5;12/5/22 12:04:31;12/5/22 12:08:07;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;10;9;5;9;2;6;9;3;8;8;5;3;7;5;10;10;10;9;10;8;10
+6;12/5/22 11:59:52;12/5/22 12:08:18;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;9;1;5;1;5;2;3;5;7;5;6;3;4;5;2;2;7;2;6;6;6
+7;12/5/22 11:59:42;12/5/22 12:08:34;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;10;0;7;10;6;2;6;3;8;7;2;2;3;5;5;2;9;8;8;8;2
+8;12/5/22 12:01:31;12/5/22 12:09:13;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;10;9;9;2;9;9;9;9;1;3;7;9;3;2;8;8;2;2;2;5;8
+9;12/5/22 12:01:31;12/5/22 12:09:40;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;8;0;5;8;7;10;7;0;3;10;2;4;10;7;8;2;5;6;8;5;7
+10;12/5/22 12:00:24;12/5/22 12:10:14;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;5;0;8;10;7;5;3;7;8;10;9;2;10;8;0;5;7;8;9;1;8
+11;12/5/22 12:02:31;12/5/22 12:10:14;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;10;3;10;10;4;8;5;2;10;10;10;0;7;7;5;2;10;8;10;6;7
+12;12/5/22 12:02:27;12/5/22 12:10:45;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;8;3;9;7;7;8;9;8;8;8;8;3;9;8;4;6;10;7;8;2;7
+13;12/5/22 12:01:29;12/5/22 12:11:41;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;10;0;7;10;3;3;3;7;8;6;0;0;7;4;3;0;8;8;8;8;5
+14;12/5/22 12:08:24;12/5/22 12:14:57;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;10;0;7;5;3;4;6;5;8;4;7;5;9;3;2;6;8;7;9;3;5
+15;12/5/22 12:03:25;12/5/22 12:16:00;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;9;0;6;9;7;5;4;0;7;7;3;3;6;6;3;1;7;7;7;6;1
+16;12/5/22 12:07:08;12/5/22 12:19:14;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;2;3;9;8;8;5;7;6;4;7;7;3;6;6;4;3;7;3;6;10;8
+17;12/5/22 12:06:36;12/5/22 12:21:01;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;5;0;9;9;8;6;8;2;1;8;2;5;9;8;5;9;5;6;5;5;3
+18;12/5/22 12:05:19;12/5/22 12:21:42;anonymous;;J'accepte que mes informations saisies soient exploitées dans le cadre d'une étude scientifique.;;;5;0;10;4;5;10;8;5;0;7;1;0;1;5;8;1;9;2;1;1;5
